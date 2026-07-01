@@ -1,0 +1,14 @@
+package com.springrush.socialmedia.repository;
+
+import com.springrush.socialmedia.entity.UserEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UserRepo extends JpaRepository<UserEntity, Long> {
+
+    UserEntity findByUserName(String userName);
+
+    UserEntity findByEmail(String email);
+
+}
